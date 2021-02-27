@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     # this method is called when user refresh on browser
     # use token send to find user and send back same JSON data as successful login
     token = request.headers['Authorization'].split(' ').last
-    decoded_token = JWT.decode(token, 'new$_weathe%', true, { algorithm: 'HS256' })
+    decoded_token = JWT.decode(token, 'p00p_track$', true, { algorithm: 'HS256' })
     id = decoded_token.first['user_id']
 
     user = User.find(id)
